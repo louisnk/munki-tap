@@ -29,5 +29,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           git clone https://github.com/munki/munki-pkg.git
-          sh package/munkitap_build.sh
+          mv munki-pkg/* package/
+          cd package
+          sh munkitap_build.sh
           ls -l
