@@ -13,7 +13,7 @@
 
 
 # Check for requirements
-MUNKIPKG=$(which munkipkg)
+MUNKIPKG=munki-pkg/munkipkg
 
 if [ ! -e "$MUNKIPKG" ]
 then
