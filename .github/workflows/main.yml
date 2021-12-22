@@ -38,7 +38,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: "build/*.pkg;*.zip;random-name-*.txt"
+          file: "package/build/*.pkg;*.zip;random-name-*.txt"
           tags: false
           draft: true
           branches: "master"
