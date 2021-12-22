@@ -40,7 +40,7 @@ jobs:
         with:
           file: "package/build/*.pkg;*.zip;random-name-*.txt"
           tags: false
-          draft: true
+          draft: false
           branches: "master"
           verbose: true
       
