@@ -34,4 +34,13 @@ jobs:
           chmod a+x munki-pkg/munkipkg
           cd package
           sh munkitap_build.sh
-          ls -l
+      - uses: xresloader/upload-to-github-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: "build/*.pkg;*.zip;random-name-*.txt"
+          tags: false
+          draft: true
+          branches: "master"
+          verbose: true
+      
