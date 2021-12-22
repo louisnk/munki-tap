@@ -30,7 +30,8 @@ jobs:
         run: |
           echo $PATH
           git clone https://github.com/munki/munki-pkg.git
-          #mv munki-pkg/* package/
+          export PATH=$PATH:$(pwd)/munki-pkg
+          chmod a+x munki-pkg/munkipkg
           cd package
           sh munkitap_build.sh
           ls -l
